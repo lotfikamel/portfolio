@@ -8,7 +8,7 @@ const Navbar = () => {
 
 		const element = document.querySelector(el);
 
-		element.scrollIntoView({ behavior: 'smooth'});
+		element.scrollIntoView({block: "end", inline: "nearest", behavior : "smooth"});
 	}
 
 	return (
