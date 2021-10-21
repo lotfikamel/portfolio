@@ -1,24 +1,25 @@
-import './App.css';
+import Navbar from "./Components/Navbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Menu from './Components/Menu';
+
+import Router from './Router';
+
+const App = () => {
+
+	return (
+
+		<div id="app">
+
+			<Navbar/>
+
+			<Menu/>
+
+			<main>
+				<Router/>
+			</main>
+
+		</div>
+	)
 }
 
 export default App;
