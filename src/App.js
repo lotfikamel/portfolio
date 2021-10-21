@@ -8,11 +8,9 @@ const App = () => {
 
 	return (
 
-		<div id="app">
+		<div id="app" className="main-page-padding">
 
 			<Navbar/>
-
-			<Menu/>
 
 			<main>
 				<Router/>

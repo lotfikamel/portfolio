@@ -54,8 +54,8 @@ img {
 
 .main-page-padding {
 
-	padding-top: 85px;
-	padding-bottom: 20px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .separator {
@@ -351,6 +351,7 @@ span.first-letter-capitalize {
 	left: 0;
 	right: 0;
 	z-index: 100;
+	background-color: #000;
 }
 
 #navbar #logo {
