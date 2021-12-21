@@ -4,11 +4,19 @@ import ImageSlideShow from '../../Components/ImageSlideShow';
 
 const MyWork = () => {
 
+	const appSourcesTexts = {
+
+		android : 'view in google play',
+		web : 'visit the web app'
+	}
+
 	const projects = [
 
 		{
 			name : 'Wigo',
-			description : 'lotfi love JS',
+			type : 'android',
+			link : 'https://play.google.com/store/apps/details?id=com.wigo.dz.app',
+			description : 'a multi-vendor e-commerce/delivery application built for a new startup.',
 			images : [
 
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/Screenshot_20211207-115032.png',
@@ -26,7 +34,9 @@ const MyWork = () => {
 
 		{
 			name : 'Wigo Delivery',
-			description : 'lotfi love JS',
+			type : 'android',
+			link : 'https://play.google.com/store/apps/details?id=com.wigo.dz.delivery.app',
+			description : 'the official application used by Wigo deliverers to receive and deliver orders, check their income, etc.',
 			images : [
 
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/Screenshot_20211207-121439.png',
@@ -39,7 +49,9 @@ const MyWork = () => {
 
 		{
 			name : 'ML Chat',
-			description : 'lotfi love JS',
+			type : 'android',
+			link : 'https://play.google.com/store/apps/details?id=com.amarc.mlchat',
+			description : 'real time chat application to meet and chat with new people.',
 			images : [
 
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/profile.jpg',
@@ -49,6 +61,44 @@ const MyWork = () => {
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/comments.jpg',
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/chat.jpg',
 			]
+		},
+
+		{
+			name : 'Celyn Store',
+			type : 'web',
+			description : 'lotfi love JS',
+			images : [
+
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/1.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/2.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/3.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/4.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/5.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/6.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/7.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/8.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/9.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/10.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/11.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/12.png'
+			]
+		},
+
+		{
+			name : 'Optu',
+			type : 'android',
+			link : 'https://play.google.com/store/apps/details?id=com.amarc.optu.app',
+			description : 'lotfi love JS',
+			images : [
+
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/optu1.jpg',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/optu2.jpg',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/optu3.jpg',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/optu4.jpg',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/optu5.jpg',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/optu6.jpg',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/optu7.jpg'
+			]
 		}
 	]
 
@@ -56,6 +106,7 @@ const MyWork = () => {
 
 		<div className="my-work uk-margin-large">
 			<h2 className="uk-h1 uk-text-white first-letter-capitalize">my work</h2>
+			<p className="uk-text-white uk-text-lead">Here is the list of my previous work choosen for you, each work combines clean code, modern design and great robustness.</p>
 			<div className="uk-grid-small uk-child-width-1-1 uk-child-width-1-3@s uk-grid-match uk-flex-center" data-uk-grid>
 				{ projects.map(project => (
 
@@ -65,6 +116,10 @@ const MyWork = () => {
 							<div className="uk-padding-small">
 								<h4 className="uk-text-white uk-text-bold uk-margin-remove">{ project.name }</h4>
 								<p className="uk-text-white uk-margin-remove">{ project.description }</p>
+								{ project.link && (
+
+									<a href={project.link} target="_blank" rel="noreferrer">{ appSourcesTexts[project.type] }</a>
+								) }
 							</div>
 						</div>
 					</div>
