@@ -19,10 +19,10 @@ const Navbar = () => {
 					<div className="uk-navbar-center">
 						<ul className="uk-navbar-nav uk-text-white">
 							<li>
-								<a onClick={(e) => scroll(e, '.about')} className="uk-text-bold">about</a>
+								<a onClick={(e) => scroll(e, '.skills')} className="uk-text-bold">skills</a>
 							</li>
 							<li>
-								<a onClick={(e) => scroll(e, '.about')} className="uk-text-bold">projects</a>
+								<a onClick={(e) => scroll(e, '.my-work')} className="uk-text-bold">my work</a>
 							</li>
 							<li>
 								<a onClick={(e) => scroll(e, '.contact')} className="uk-text-bold">contact</a>

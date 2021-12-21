@@ -1,7 +1,5 @@
 import Navbar from "./Components/Navbar";
 
-import Menu from './Components/Menu';
-
 import Router from './Router';
 
 const App = () => {

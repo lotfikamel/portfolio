@@ -173,7 +173,7 @@ img[data-src] {
 .uk-button-outline-primary,
 .uk-offcanvas-bar .uk-button-outline-primary {
 
-	background-color: #fff;
+	background-color: transparent;
 	color: var(--color-primary);
 	border: 2px solid var(--color-primary);
 }
