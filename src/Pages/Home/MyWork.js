@@ -6,7 +6,7 @@ const MyWork = () => {
 
 	const appSourcesTexts = {
 
-		android : 'view in google play',
+		android : 'view in Google Play',
 		web : 'visit the web app'
 	}
 
@@ -18,7 +18,7 @@ const MyWork = () => {
 			link : 'https://play.google.com/store/apps/details?id=com.wigo.dz.app',
 			description : 'a multi-vendor e-commerce/delivery application built for a new startup.',
 			images : [
-
+				
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/Screenshot_20211207-115032.png',
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/Screenshot_20211207-114957.png',
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/Screenshot_20211207-115714.png',
@@ -66,7 +66,7 @@ const MyWork = () => {
 		{
 			name : 'Celyn Store',
 			type : 'web',
-			description : 'lotfi love JS',
+			description : 'customized online store built for a customer.',
 			images : [
 
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/1.png',
@@ -88,7 +88,7 @@ const MyWork = () => {
 			name : 'Optu',
 			type : 'android',
 			link : 'https://play.google.com/store/apps/details?id=com.amarc.optu.app',
-			description : 'lotfi love JS',
+			description : 'marketplace application that connects buyers and stores to contract purchasing transactions.',
 			images : [
 
 				'https://f002.backblazeb2.com/file/lotfi-portfolio/optu1.jpg',
@@ -102,26 +102,53 @@ const MyWork = () => {
 		}
 	]
 
+	const openPreview = (images) => {
+
+		UIkit.lightboxPanel({
+
+			items : images.map(src => ({ source: src })),
+
+			index : 0
+		}).show();
+	}
+
 	return (
 
 		<div className="my-work uk-margin-large">
 			<h2 className="uk-h1 uk-text-white first-letter-capitalize">my work</h2>
 			<p className="uk-text-white uk-text-lead">Here is the list of my previous work choosen for you, each work combines clean code, modern design and great robustness.</p>
-			<div className="uk-grid-small uk-child-width-1-1 uk-child-width-1-3@s uk-grid-match uk-flex-center" data-uk-grid>
+			<div className="uk-grid-small uk-child-width-1-1" data-uk-grid>
 				{ projects.map(project => (
 
 					<div key={project.name}>
-						<div className="uk-border-full uk-border-rounded">
-							<ImageSlideShow images={project.images}/>
-							<div className="uk-padding-small">
-								<h4 className="uk-text-white uk-text-bold uk-margin-remove">{ project.name }</h4>
-								<p className="uk-text-white uk-margin-remove">{ project.description }</p>
-								{ project.link && (
 
-									<a href={project.link} target="_blank" rel="noreferrer">{ appSourcesTexts[project.type] }</a>
-								) }
+						<div className="uk-background-secondary">
+
+							<div className="uk-grid-small uk-child-width-expand@s uk-child-width-1-1" data-uk-grid>
+								
+								<div>
+									<div className="uk-padding">
+										<h3 className="uk-text-white uk-text-bold uk-margin-small">{ project.name }</h3>
+										{ project.link && (
+
+											<a href={project.link} target="_blank" rel="noreferrer">{ appSourcesTexts[project.type] }</a>
+										) }
+										<p className="uk-text-white uk-margin-small">{ project.description }</p>
+										<div>
+											<button onClick={() => openPreview(project.images)} className="uk-button uk-button-primary uk-button-rounded">see preview</button>
+										</div>
+									</div>
+									
+								</div>
+
+								<div>
+									<ImageSlideShow images={project.images}/>
+								</div>
 							</div>
+
 						</div>
+
+						
 					</div>
 				)) }
 			</div>

@@ -16,9 +16,9 @@ const ImageSlideShow = ({ images }) => {
 
 	return (
 
-		<div id="image-slide-show" className="uk-position-relative uk-visible-toggle uk-light cursor-pointer" tabIndex="-1" data-uk-slideshow uk-data-type="image">
+		<div id="image-slide-show" className="uk-position-relative uk-visible-toggle uk-light cursor-pointer uk-height-1-1" tabIndex="-1" data-uk-slideshow="autoplay: true; autoplay-interval: 5000" uk-data-type="image">
 
-			<ul className="uk-slideshow-items">
+			<ul className="uk-slideshow-items uk-height-1-1">
 
 				{ images.map((img, index) => (
 

@@ -12,7 +12,7 @@ const HomePage = () => {
 		<div id="home-page">
 			<div className="uk-container">
 
-				<div className="header uk-flex uk-flex-middle uk-flex-center" data-uk-height-viewport>
+				<div className="header uk-flex uk-flex-middle uk-flex-center" data-uk-height-viewport="offset-top : true">
 					<div className="uk-text-center">
 						<h1 className="uk-heading-small uk-text-white uk-margin-remove first-letter-capitalize">Hello, I am <span className="uk-text-primary">Lotfi Kamel</span>.</h1>
 						<h1 className="uk-heading-small uk-text-white uk-margin-remove first-letter-capitalize">I am a network engineer and senior full-stack developer.</h1>

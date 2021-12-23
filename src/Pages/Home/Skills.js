@@ -4,169 +4,106 @@ import { Check } from "react-feather";
 
 const Skills = () => {
 
-	const [ skills, setSkills ] = React.useState({
+	const fields = [
 
-		frontend : [
+		{
+			name : 'front-end',
+			skills : [
 
-			'HTML5',
-			'CSS3',
-			'JavaScript ES6/ES7',
-			'React.Js',
-			'React Router DOM',
-			'Redux',
-			'materializecss',
-			'UIkit Css',
-		],
+				'HTML5',
+				'CSS3',
+				'JavaScript ES6/ES7',
+				'React.Js',
+				'React Router DOM',
+				'Redux',
+				'materializecss',
+				'UIkit Css',
+			]
+		},
 
-		mobileFrontend : [
+		{
+			name : 'mobile front-end',
+			skills : [
 
-			'React Native',
-			'Expo SDK'
-		],
+				'React Native',
+				'Expo SDK'
+			]
+		},
 
-		backend : [
+		{
+			name : 'backend',
+			skills : [
 
-			'MongoDB',
-			'MySQL',
-			'Redis',
-			'NodeJs',
-			'Express.js',
-			'Socket.IO',
-			'Json Web Token',
-			'Firebase Admin SDK',
-			'Expo Server SDK',
-		],
+				'MongoDB',
+				'MySQL',
+				'Redis',
+				'NodeJs',
+				'Express.js',
+				'Socket.IO',
+				'Json Web Token',
+				'Firebase Admin SDK',
+				'Expo Server SDK',
+			]
+		},
 
-		operatingSystemsAndServers : [
+		{
+			name : 'operating systems and servers',
+			skills : [
 
-			'Ubuntu',
-			'Ubuntu Server',
-			'Configuration and deployment of applications on Ubuntu VPS servers'
-		],
+				'Ubuntu',
+				'Ubuntu Server',
+				'Configuration and deployment of applications on Ubuntu VPS servers'
+			]
+		},
 
-		thirdPartyServices : [
+		{
+			name : 'third party services',
+			skills : [
 
-			'Backblaze B2 Cloud Storage',
-			'Firebase',
-			'Google Admob',
-			'Google Analytics',
-		],
+				'Backblaze B2 Cloud Storage',
+				'Firebase',
+				'Google Admob',
+				'Google Analytics',
+			]
+		},
 
-		otherSkills : [
+		{
+			name : 'other skills',
+			skills : [
 
-			'Web scraping with Puppeteer',
-			'Machine learning with python and sklearn'
-		]
-	})
+				'Web scraping with Puppeteer',
+				'Machine learning with python and sklearn'
+			]
+		}
+	]
 
 	return (
 
 		<div className="skills uk-margin-large">
 			<h2 className="uk-h1 uk-text-white first-letter-capitalize">skills</h2>
 			<p className="uk-text-white uk-text-lead">When I am entrusted with a project, I build it myself, from zero to production, because I have many skills in different areas. take a look !</p>
-			<div className="uk-grid-small uk-child-width-1-1 uk-child-width-1-3@s uk-grid-match uk-flex-center" data-uk-grid>
+			<div className="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-match uk-flex-center" data-uk-grid>
 
-				<div>
-					<div className="uk-padding-small uk-border-full uk-border-rounded">
-						<h3 className="uk-text-white uk-text-capitalize">web front-end</h3>
-						<ul className="uk-nav">
+				{ fields.map(field => (
 
-							{ skills.frontend.map(skill => (
+					<div key={field.name}>
+						<div className="uk-padding-small uk-background-secondary uk-border-rounded">
+							<h3 className="uk-text-white uk-text-capitalize">{ field.name }</h3>
+							<ul className="uk-nav">
 
-								<li key={skill}>
-									<Check className="uk-text-success"/>
-									<span className="uk-text-white uk-margin-small-left">{ skill }</span>
-								</li>
-							)) }
-							
-						</ul>
+								{ field.skills.map(skill => (
+
+									<li key={skill}>
+										<Check className="uk-text-success"/>
+										<span className="uk-text-white uk-margin-small-left">{ skill }</span>
+									</li>
+								)) }
+								
+							</ul>
+						</div>
 					</div>
-				</div>
+				)) }
 
-				<div>
-					<div className="uk-padding-small uk-border-full uk-border-rounded">
-						<h3 className="uk-text-white uk-text-capitalize">mobile front-end</h3>
-						<ul className="uk-nav">
-
-							{ skills.mobileFrontend.map(skill => (
-
-								<li key={skill}>
-									<Check className="uk-text-success"/>
-									<span className="uk-text-white uk-margin-small-left">{ skill }</span>
-								</li>
-							)) }
-							
-						</ul>
-					</div>
-				</div>
-
-				<div>
-					<div className="uk-padding-small uk-border-full uk-border-rounded">
-						<h3 className="uk-text-white uk-text-capitalize">web back-end</h3>
-						<ul className="uk-nav">
-
-							{ skills.backend.map(skill => (
-
-								<li key={skill}>
-									<Check className="uk-text-success"/>
-									<span className="uk-text-white uk-margin-small-left">{ skill }</span>
-								</li>
-							)) }
-							
-						</ul>
-					</div>
-				</div>
-
-				<div>
-					<div className="uk-padding-small uk-border-full uk-border-rounded">
-						<h3 className="uk-text-white uk-text-capitalize">operating systems and servers</h3>
-						<ul className="uk-nav">
-
-							{ skills.operatingSystemsAndServers.map(skill => (
-
-								<li key={skill}>
-									<Check className="uk-text-success"/>
-									<span className="uk-text-white uk-margin-small-left">{ skill }</span>
-								</li>
-							)) }
-							
-						</ul>
-					</div>
-				</div>
-
-				<div>
-					<div className="uk-padding-small uk-border-full uk-border-rounded">
-						<h3 className="uk-text-white uk-text-capitalize">third-party services</h3>
-						<ul className="uk-nav">
-
-							{ skills.thirdPartyServices.map(skill => (
-
-								<li key={skill}>
-									<Check className="uk-text-success"/>
-									<span className="uk-text-white uk-margin-small-left">{ skill }</span>
-								</li>
-							)) }
-							
-						</ul>
-					</div>
-				</div>
-
-				<div>
-					<div className="uk-padding-small uk-border-full uk-border-rounded">
-						<h3 className="uk-text-white uk-text-capitalize">other skills</h3>
-						<ul className="uk-nav">
-
-							{ skills.otherSkills.map(skill => (
-
-								<li key={skill}>
-									<Check className="uk-text-success"/>
-									<span className="uk-text-white uk-margin-small-left">{ skill }</span>
-								</li>
-							)) }
-							
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
 	)
