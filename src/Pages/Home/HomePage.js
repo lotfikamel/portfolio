@@ -1,23 +1,32 @@
 import React from 'react';
 
 import { ArrowRight, Check, Download, Facebook, Linkedin, Mail, Phone } from "react-feather";
+
 import MyWork from './MyWork';
 
 import Skills from './Skills';
+
+import background from '../../Assets/background.jpg';
+
+console.log(background);
 
 const HomePage = () => {
 
 	return (
 
 		<div id="home-page">
-			<div className="uk-container">
 
-				<div className="header uk-flex uk-flex-middle uk-flex-center" data-uk-height-viewport="offset-top : true">
+			<div style={{ background : `url('${background}')` }} className="uk-margin-large header uk-background-cover uk-flex uk-flex-middle uk-flex-center" data-uk-height-viewport="offset-top : true">
+				<div className="uk-container">
 					<div className="uk-text-center">
 						<h1 className="uk-heading-small uk-text-white uk-margin-remove first-letter-capitalize">Hello, I am <span className="uk-text-primary">Lotfi Kamel</span>.</h1>
 						<h1 className="uk-heading-small uk-text-white uk-margin-remove first-letter-capitalize">I am a network engineer and senior full-stack developer.</h1>
 					</div>
+					
 				</div>
+			</div>
+
+			<div className="uk-container">
 
 				<Skills/>
 

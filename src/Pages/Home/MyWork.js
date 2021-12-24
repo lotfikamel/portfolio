@@ -124,9 +124,9 @@ const MyWork = () => {
 
 						<div className="uk-background-secondary">
 
-							<div className="uk-grid-small uk-child-width-expand@s uk-child-width-1-1" data-uk-grid>
+							<div className="uk-grid-small" data-uk-grid>
 								
-								<div>
+								<div className="uk-width-1-1 uk-width-2-5@s">
 									<div className="uk-padding">
 										<h3 className="uk-text-white uk-text-bold uk-margin-small">{ project.name }</h3>
 										{ project.link && (
@@ -135,13 +135,13 @@ const MyWork = () => {
 										) }
 										<p className="uk-text-white uk-margin-small">{ project.description }</p>
 										<div>
-											<button onClick={() => openPreview(project.images)} className="uk-button uk-button-primary uk-button-rounded">see preview</button>
+											<button onClick={() => openPreview(project.images)} className="uk-button uk-button-primary uk-button-rounded">see work preview</button>
 										</div>
 									</div>
 									
 								</div>
 
-								<div>
+								<div className="uk-width-1-1 uk-width-expand@s">
 									<ImageSlideShow images={project.images}/>
 								</div>
 							</div>
