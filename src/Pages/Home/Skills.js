@@ -80,14 +80,14 @@ const Skills = () => {
 	return (
 
 		<div className="skills uk-margin-large">
-			<h2 className="uk-h1 uk-text-white first-letter-capitalize">skills</h2>
+			<h2 className="uk-h1 uk-text-bold uk-text-white first-letter-capitalize">skills</h2>
 			<p className="uk-text-white uk-text-lead">When I am entrusted with a project, I build it myself, from zero to production, because I have many skills in different areas. take a look !</p>
 			<div className="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-match uk-flex-center" data-uk-grid>
 
 				{ fields.map(field => (
 
 					<div key={field.name}>
-						<div className="uk-padding-small uk-background-secondary uk-border-rounded">
+						<div className="uk-padding uk-background-secondary uk-border-rounded">
 							<h3 className="uk-text-white uk-text-capitalize">{ field.name }</h3>
 							<ul className="uk-nav">
 

@@ -48,6 +48,26 @@ const MyWork = () => {
 		},
 
 		{
+			name : 'إحسان',
+			type : 'web',
+			link : 'https://ihan-dz.com',
+			description : ' web application that aims to facilitate donations in the Algerian society.',
+			images : [
+
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan1.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan2.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan3.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan4.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan5.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan6.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan7.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan8.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan9.png',
+				'https://f002.backblazeb2.com/file/lotfi-portfolio/ihsan10.png',
+			]
+		},
+
+		{
 			name : 'ML Chat',
 			type : 'android',
 			link : 'https://play.google.com/store/apps/details?id=com.amarc.mlchat',
@@ -115,8 +135,8 @@ const MyWork = () => {
 	return (
 
 		<div className="my-work uk-margin-large">
-			<h2 className="uk-h1 uk-text-white first-letter-capitalize">my work</h2>
-			<p className="uk-text-white uk-text-lead">Here is the list of my previous work choosen for you, each work combines clean code, modern design and great robustness.</p>
+			<h2 className="uk-h1 uk-text-bold uk-text-white first-letter-capitalize">my work</h2>
+			<p className="uk-text-white uk-text-lead">Here is the list of my previous works choosen for you, each work combines clean code, modern design and great robustness.</p>
 			<div className="uk-grid-small uk-child-width-1-1" data-uk-grid>
 				{ projects.map(project => (
 

@@ -23,7 +23,7 @@ const ImageSlideShow = ({ images }) => {
 				{ images.map((img, index) => (
 
 					<li key={img}>
-						<img data-uk-img onClick={() => createLightboxPanel(index)} src={img} alt="" data-uk-cover/>
+						<img data-uk-img="" onClick={() => createLightboxPanel(index)} data-src={img} alt="" data-uk-cover/>
 					</li>
 				)) }
 			</ul>

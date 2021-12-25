@@ -8,8 +8,6 @@ import Skills from './Skills';
 
 import background from '../../Assets/background.jpg';
 
-console.log(background);
-
 const HomePage = () => {
 
 	return (
@@ -20,7 +18,7 @@ const HomePage = () => {
 				<div className="uk-container">
 					<div className="uk-text-center">
 						<h1 className="uk-heading-small uk-text-white uk-margin-remove first-letter-capitalize">Hello, I am <span className="uk-text-primary">Lotfi Kamel</span>.</h1>
-						<h1 className="uk-heading-small uk-text-white uk-margin-remove first-letter-capitalize">I am a network engineer and senior full-stack developer.</h1>
+						<h1 className="uk-heading-small uk-text-white uk-margin-remove first-letter-capitalize">a network engineer and senior Full-Stack developer.</h1>
 					</div>
 					
 				</div>
@@ -33,7 +31,7 @@ const HomePage = () => {
 				<MyWork/>
 
 				<div className="contact uk-margin">
-					<h2 className="uk-h1 uk-text-white first-letter-capitalize">contact me</h2>
+					<h2 className="uk-h1 uk-text-bold uk-text-white first-letter-capitalize">contact me</h2>
 					<p className="uk-text-white uk-text-lead">If you are considering building your next big project, don't hesitate to contact me. I can ensure the best quality of work.</p>
 					<ul className="uk-nav">
 						<li className="uk-text-white">
